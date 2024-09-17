@@ -1,7 +1,10 @@
+import 'package:fluentui_system_icons/fluentui_system_icons.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/widgets.dart';
+import 'package:ticket_app/base/res/media.dart';
 import 'package:ticket_app/base/res/styles/app_styles.dart';
+import 'package:ticket_app/base/widgets/app_double_text.dart';
 
 class HomeScreen extends StatelessWidget {
   const HomeScreen({super.key});
@@ -13,9 +16,11 @@ class HomeScreen extends StatelessWidget {
     // listview.builder
     // Expand
     return Scaffold(
+      backgroundColor: AppStyles.bgColor,
       // we wont scrollable effect
       body: ListView(
         children: [
+          const SizedBox(height: 40,),
           Container(
             padding: const EdgeInsets.symmetric(horizontal: 20),
             child: Column(
@@ -34,7 +39,7 @@ class HomeScreen extends StatelessWidget {
                           height: 5,
                         ),
                         Text(
-                          "Book tickets ",
+                          "Book Tickets ",
                           style: AppStyles.headlineStyle1,
                         ),
                       ],
@@ -45,22 +50,36 @@ class HomeScreen extends StatelessWidget {
                       decoration: BoxDecoration(
                         borderRadius: BorderRadius.circular(10),
                         image: DecorationImage(
-                          image: AssetImage("assets/images/logo.png"),
+                          image: AssetImage(AppMedia.logo),
                         ),
                       ),
                     ),
                   ],
                 ),
-                Row(
-                  mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                  children: [
-                    Text("Search Icon "),
-                    Text("space"),
-                  ],
+               const  SizedBox(height: 25,),
+                Container(
+                  padding: const EdgeInsets.symmetric(horizontal: 12,vertical: 12),
+                  decoration: BoxDecoration(
+                    borderRadius: BorderRadius.circular(10),
+                   color: const Color(0xFFF4F6FD),
+                  ),
+                  child: Row(
+                    children: [
+                      Icon(FluentIcons.search_20_regular , color : Color(0xFFBFC205)),
+                      Text("Search"),
+
+                    ],
+                  ),
+                ),
+                const SizedBox(height: 40,),
+                AppDoubleText(
+                  bigText: "Upcoming Flights",
+                  smallText:  "view all" ,
                 ),
               ],
             ),
           ),
+
         ],
       ),
     );
