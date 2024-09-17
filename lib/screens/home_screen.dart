@@ -26,24 +26,28 @@ class HomeScreen extends StatelessWidget {
                     Column(
                       crossAxisAlignment: CrossAxisAlignment.start,
                       children: [
-                       const  Text(
+                        Text(
                           "Good morning",
-                          style: TextStyle(
-                              fontSize: 17, fontWeight: FontWeight.w500),
+                          style: AppStyles.headlineStyle3,
                         ),
                         const SizedBox(
                           height: 5,
                         ),
                         Text(
                           "Book tickets ",
-
+                          style: AppStyles.headlineStyle1,
                         ),
                       ],
                     ),
                     Container(
-                      color: Colors.red,
-                      width: 100,
-                      height: 70,
+                      width: 45,
+                      height: 45,
+                      decoration: BoxDecoration(
+                        borderRadius: BorderRadius.circular(10),
+                        image: DecorationImage(
+                          image: AssetImage("assets/images/logo.png"),
+                        ),
+                      ),
                     ),
                   ],
                 ),
