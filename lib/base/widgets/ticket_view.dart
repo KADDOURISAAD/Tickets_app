@@ -6,6 +6,15 @@ class TicketView extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return  Container();
+    final size = MediaQuery.of(context).size;
+    return SizedBox(
+        width: size.width*0.85,
+        height: 179,
+      child: Container(
+        margin: EdgeInsets.only(right: 16),
+        color: Colors.red,
+        child: Text("Hello"),
+      ),
+    );
   }
 }
