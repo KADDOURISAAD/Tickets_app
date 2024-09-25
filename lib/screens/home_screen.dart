@@ -7,6 +7,8 @@ import 'package:ticket_app/base/res/styles/app_styles.dart';
 import 'package:ticket_app/base/widgets/app_double_text.dart';
 import 'package:ticket_app/base/widgets/ticket_view.dart';
 
+import '../base/utils/app_json.dart';
+
 class HomeScreen extends StatelessWidget {
   const HomeScreen({super.key});
 
@@ -52,7 +54,7 @@ class HomeScreen extends StatelessWidget {
                       height: 45,
                       decoration: BoxDecoration(
                         borderRadius: BorderRadius.circular(10),
-                        image: DecorationImage(
+                        image: const DecorationImage(
                           image: AssetImage(AppMedia.logo),
                         ),
                       ),
@@ -69,7 +71,7 @@ class HomeScreen extends StatelessWidget {
                     borderRadius: BorderRadius.circular(10),
                     color: const Color(0xFFF4F6FD),
                   ),
-                  child: Row(
+                  child: const Row(
                     children: [
                       Icon(FluentIcons.search_20_regular,
                           color: Color(0xFFBFC205)),
@@ -80,14 +82,30 @@ class HomeScreen extends StatelessWidget {
                 const SizedBox(
                   height: 40,
                 ),
-                AppDoubleText(
+                 AppDoubleText(
                   bigText: "Upcoming Flights",
                   smallText: "view all",
+                  func: () => Navigator.pushNamed(context, "/all_tickets") ,
                 ),
                 const SizedBox(
                   height: 20,
                 ),
-                TicketView(),
+                SingleChildScrollView(
+                  scrollDirection: Axis.horizontal,
+
+                    child: Row(
+                      children: ticketList.take(2).map((singleTicket) => TicketView(ticket:singleTicket)
+                      ).toList(),
+                    ),
+                ),
+                const SizedBox(
+                  height: 40,
+                ),
+                 AppDoubleText(
+                  bigText: "Hotels",
+                  smallText: "view all",
+                   func: () {} ,
+                ),
               ],
             ),
           ),

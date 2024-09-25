@@ -16,6 +16,7 @@ class AppStyles {
   static TextStyle headlineStyle3 = const TextStyle(
     fontSize: 17,
     fontWeight: FontWeight.w500,
+
   );
   static TextStyle headlineStyle2 = TextStyle(
     fontSize: 21,
@@ -25,5 +26,6 @@ class AppStyles {
   static TextStyle headlineStyle4 = const TextStyle(
     fontSize: 14,
     fontWeight: FontWeight.w500,
+
   );
 }

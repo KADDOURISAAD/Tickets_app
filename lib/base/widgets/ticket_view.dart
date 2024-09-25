@@ -8,7 +8,9 @@ import 'package:ticket_app/base/widgets/text_style_fourth.dart';
 import 'package:ticket_app/base/widgets/text_style_third.dart';
 
 class TicketView extends StatelessWidget {
-  const TicketView({super.key});
+  final Map<String,dynamic> ticket;
+  final bool wholeScreen;
+  const TicketView({super.key, required this.ticket,  this.wholeScreen=false});
 
   @override
   Widget build(BuildContext context) {
@@ -17,7 +19,7 @@ class TicketView extends StatelessWidget {
       width: size.width * 0.85,
       height: 189,
       child: Container(
-        margin: const EdgeInsets.only(right: 16),
+        margin:  EdgeInsets.only(right: wholeScreen==true?0:16 ),
         child: Column(
           children: [
             // Blue Part of th ticketr
@@ -34,9 +36,10 @@ class TicketView extends StatelessWidget {
                   // Show departure and destination with icons first line
                   Row(
                     children: [
-                      const TextStyleThird(
-                        text: "NYC",
+                       TextStyleThird(
+                        text: ticket["from"]["code"],
                       ),
+                      // ticket Icon
                       Expanded(
                         child: Container(),
                       ),
@@ -66,8 +69,8 @@ class TicketView extends StatelessWidget {
                       Expanded(
                         child: Container(),
                       ),
-                      const TextStyleThird(
-                        text: "LDN",
+                       TextStyleThird(
+                        text: ticket["to"]["code"],
                       ),
                     ],
                   ),
@@ -77,25 +80,25 @@ class TicketView extends StatelessWidget {
                   // Show departure and destination names with time
                   Row(
                     children: [
-                      const SizedBox(
+                       SizedBox(
                         width: 100,
                         child: TextStyleFourth(
-                          text: "New-York",
+                          text: ticket["from"]["name"],
                         ),
                       ),
                       Expanded(
                         child: Container(),
                       ),
-                      const TextStyleFourth(
-                        text: "8H 30M",
+                        TextStyleFourth(
+                        text: ticket["flying_time"],
                       ),
                       Expanded(
                         child: Container(),
                       ),
-                      const SizedBox(
+                       SizedBox(
                         width: 100,
                         child: TextStyleFourth(
-                          text: "London",
+                          text: ticket["to"]["name"],
                           align: TextAlign.end,
                         ),
                       ),
@@ -132,67 +135,18 @@ class TicketView extends StatelessWidget {
                     bottomRight: Radius.circular(21),
                     bottomLeft: Radius.circular(21)),
               ),
-              child: const Column(
+              child:  Column(
                 children: [
                   // Show departure and destination with icons first line
+                  // Show departure and destination names with time
                   Row(
                     mainAxisAlignment: MainAxisAlignment.spaceBetween,
                     children: [
-                      AppColumnTextLayout(alignment: CrossAxisAlignment.start,topText: "1 MAY",bottomText: "DATE",),
-                      AppColumnTextLayout(alignment: CrossAxisAlignment.center,topText: "1 MAY",bottomText: "DATE",),
-                      AppColumnTextLayout(alignment: CrossAxisAlignment.end,topText: "1 MAY",bottomText: "DATE",),
-                     /* Expanded(
-                        child: Container(),
-                      ),
-                      Text(
-                        "08:00 AM",
-                        style: AppStyles.headlineStyle3.copyWith(
-                          color: Colors.white,
-                        ),
-                      ),
-                      Expanded(
-                        child: Container(),
-                      ),
-                      Text(
-                        "23",
-                        style: AppStyles.headlineStyle3.copyWith(
-                          color: Colors.white,
-                        ),
-                      ),*/
+                      AppColumnTextLayout(alignment: CrossAxisAlignment.start,topText: ticket["date"],bottomText: "Date",),
+                      AppColumnTextLayout(alignment: CrossAxisAlignment.center,topText: ticket["departure_time"],bottomText: "Departure time",),
+                      AppColumnTextLayout(alignment: CrossAxisAlignment.end,topText: ticket["number"].toString(),bottomText: "Number",),
                     ],
                   ),
-                  SizedBox(
-                    height: 3,
-                  ),
-                  // Show departure and destination names with time
-                  /*Row(
-                    children: [
-                      Text(
-                        "Date",
-                        style: AppStyles.headlineStyle3.copyWith(
-                          color: Colors.white,
-                        ),
-                      ),
-                      Expanded(
-                        child: Container(),
-                      ),
-                      Text(
-                        "Departure time",
-                        style: AppStyles.headlineStyle3.copyWith(
-                          color: Colors.white,
-                        ),
-                      ),
-                      Expanded(
-                        child: Container(),
-                      ),
-                      Text(
-                        "Number",
-                        style: AppStyles.headlineStyle3.copyWith(
-                          color: Colors.white,
-                        ),
-                      ),
-                    ],
-                  ),*/
                 ],
               ),
             ),
