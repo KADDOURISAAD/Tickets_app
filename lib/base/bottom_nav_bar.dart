@@ -1,6 +1,6 @@
 import 'package:fluentui_system_icons/fluentui_system_icons.dart';
-import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
+import 'package:ticket_app/screens/search/search_screen.dart';
 
 import '../screens/home/home_screen.dart';
 
@@ -15,7 +15,7 @@ class _BottomNavBarState extends State<BottomNavBar> {
   // List is iterate using index
   final appScreens = [
     const HomeScreen(),
-    const Center(child: Text("Search")),
+    const SearchScreen(),
     const Center(child: Text("Tickets")),
     const Center(child: Text("Profile"))
   ];
