@@ -2,6 +2,7 @@ import 'package:fluentui_system_icons/fluentui_system_icons.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/widgets.dart';
+import 'package:ticket_app/base/res/app_routes.dart';
 import 'package:ticket_app/base/res/media.dart';
 import 'package:ticket_app/base/res/styles/app_styles.dart';
 import 'package:ticket_app/base/widgets/app_double_text.dart';
@@ -88,7 +89,7 @@ class HomeScreen extends StatelessWidget {
                  AppDoubleText(
                   bigText: "Upcoming Flights",
                   smallText: "view all",
-                  func: () => Navigator.pushNamed(context, "/all_tickets") ,
+                  func: () => Navigator.pushNamed(context, AppRoutes.allTickets) ,
                 ),
                 const SizedBox(
                   height: 20,
@@ -107,7 +108,7 @@ class HomeScreen extends StatelessWidget {
                 AppDoubleText(
                   bigText: "Hotels",
                   smallText: "view all",
-                   func: () => Navigator.pushNamed(context, "/all_hotels") ,
+                   func: () => Navigator.pushNamed(context, AppRoutes.allHotels) ,
                 ),
                 const SizedBox(
                   height: 20,
