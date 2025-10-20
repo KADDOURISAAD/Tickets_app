@@ -1,41 +1,4 @@
-<h1 align="center">Hi 👋, I'm [KADDOURI SAAD]</h1>
-<h3 align="center">Flutter Developer | Mobile App Enthusiast | Backend Explorer</h3>
-
-- 🔭 I’m currently working on **Flutter apps**
-- 🌱 I’m currently learning **Advanced Flutter, Firebase, Clean Architecture**
-- 💬 Ask me about **Flutter, Dart, PHP, MySQL, C**
-- 📫 How to reach me: **kaddourisaadedu@gmail.com**
-
----
-
-### Connect with me:
-
-<p align="left">
-  <a href="https://linkedin.com/in/yourusername" target="blank"><img align="center" src="https://cdn.jsdelivr.net/npm/simple-icons@v7/icons/linkedin.svg" alt="linkedin" height="30" width="40" /></a>
-  <a href="https://instagram.com/yourusername" target="blank"><img align="center" src="https://cdn.jsdelivr.net/npm/simple-icons@v7/icons/instagram.svg" alt="instagram" height="30" width="40" /></a>
-  <a href="mailto:your.email@example.com"><img align="center" src="https://cdn.jsdelivr.net/npm/simple-icons@v7/icons/gmail.svg" alt="gmail" height="30" width="40" /></a>
-</p>
-
----
-
-### Languages and Tools:
-
-<p align="left">
-  <img src="https://img.shields.io/badge/Dart-0175C2?style=for-the-badge&logo=dart&logoColor=white"/>
-  <img src="https://img.shields.io/badge/Flutter-02569B?style=for-the-badge&logo=flutter&logoColor=white"/>
-  <img src="https://img.shields.io/badge/PHP-777BB4?style=for-the-badge&logo=php&logoColor=white"/>
-  <img src="https://img.shields.io/badge/MySQL-4479A1?style=for-the-badge&logo=mysql&logoColor=white"/>
-  <img src="https://img.shields.io/badge/C-00599C?style=for-the-badge&logo=c&logoColor=white"/>
-  <img src="https://img.shields.io/badge/Firebase-FFCA28?style=for-the-badge&logo=firebase&logoColor=black"/>
-  <img src="https://img.shields.io/badge/Git-F05032?style=for-the-badge&logo=git&logoColor=white"/>
-</p>
-
----
-
-### GitHub Stats:
-
-![KADDOURI SAAD's GitHub stats](https://github-readme-stats.vercel.app/api/top-langs/?username=yourusername&layout=compact&theme=tokyonight)
-
----
-
-> “Do something today that your future self will thank you for.”
+![Home Screen](assets/images/IMG-20251020-WA0004.jpg)
+![All Tickets Screen](assets/images/IMG-20251020-WA0003.jpg)
+![Tickets View Screen](assets/images/IMG-20251020-WA0002.jpg)
+![Search Screen](assets/images/IMG-20251020-WA0001.jpg)
